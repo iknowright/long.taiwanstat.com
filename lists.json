@@ -3,6 +3,13 @@
     "title": "用數據看台灣 - 統計資料",
     "page": [
       {
+        "title": "臺灣各機場數據說故事",
+        "url": "airport",
+        "img": "images/airport.png",
+        "description": "用臺灣個國際機場統計數據瞭解機場狀況，與遊客走向",
+        "author": "張財實"
+      },
+      {
         "title": "移工的台灣夢",
         "url": "foreign-worker",
         "img": "images/foreign-worker.png",

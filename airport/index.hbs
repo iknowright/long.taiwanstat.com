@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang='zh-TW'>
+  <head>
+    {{> head}}
+    <!-- my js & css -->
+    <script type="text/javascript" src="https://d3js.org/topojson.v1.min.js"></script>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  </head>
+  <body>
+    {{> header}}
+    {{> start}}
+    <!-- my charts -->
+    <div class="chart">
+      <header class = "headerwrap">
+            <nav class = "nav cell">
+                <a>關於臺灣各機場概況</a>
+                <a>航空公司統計</a>
+                <a>出發地與目的地分析</a>
+            </nav>
+            <h1 class = "subjecttitle cell">臺灣各國際機場資料探討國際旅遊</h1>
+            <div class = "clock cell">
+                <div id = "real_time">
+                </div>
+            </div>
+        </header>
+        <div class = "chart chart1">
+            <h3 id = "headmap">人口密度與國際機場的地理位置關係</h2>
+            <svg id = "taiwanmap">
+            </svg>
+            <div class = "map-paragraph">
+                <p class = "contenttext">
+                    臺灣有四座國際航空站，分別是
+                    臺北松山機場（日本，兩岸線），桃園國際機場（首要國際機場），高雄國際機場，臺中國際機場。
+                </p>
+                <p class = "contenttext">
+                    上圖說明臺灣各縣市的人口密度，北部與中部是人口較於密集的地區，南部則是人口較少的地區。
+                    臺北市身爲臺灣的首都，是臺灣人口最密集的城市，當年經濟起飛與國際航線持續開行的情況下，臺北松山機場無法負荷
+                    龐大的流量，因此以臺北都會區近郊為考量的狀況下，興建桃園國際機場。
+                </p>
+                <p class = "contenttext">
+                    目前臺被松山機場負責兩岸線與日韓線，提供臺北地區航班更多的選擇。
+                    桃園國際機場則是臺灣的首要機場，在現今的機場設計下，大型國際機場多數興建於首都附近的郊區(如吉隆坡國際機場)，桃園國際機場也是同一個例子，
+                    在機場捷運的開通下，桃園國際機場的客流量也不斷的上升。
+                </p>
+                <p class = "contenttext">
+                    高雄國際機場是南部最早的一個國際機場，先前的定位是長榮航空與華航航空的次要機場，以及其他的航空公司的在飛臺灣的迫降機場，
+                    但隨着旅遊發展，目前高雄國際機場提供兩岸定期航班，也負責部分東南亞的航線。
+                </p>
+            </div>
+        </div>
+        <div class = "chart chart2">
+            <h3 id = "headline">各國際機場近年成長狀況</h2>
+            <svg id = "airportincreaseline">
+            </svg>
+            <div class = "line-paragraph">
+                </div>
+        </div>
+        <div class = "chart chart3">
+            <h3 id = "headbar">各國際機場之載客量</h2>
+            <svg id = "airportvolbar">
+            </svg>
+            <div class = "bar-paragraph">
+                </div>
+        </div>
+        <div class = "chart chart4">
+            <h3 id = "headpie">各國際機場客流量比例</h2>
+            <p>
+
+            </p>
+            <svg id = "airportvolpie">
+            </svg>
+        </div>
+        <div class = "data_source">
+            <p>資料來源</p>
+            <a href="https://www.taoyuanairport.com.tw/company_ch/NewPassengerQuery">桃園機場營運實績（官方）</a></br>
+            <a href="https://www.kia.gov.tw/ServiceResults.aspx?AirLine=1&StartYear=2010-1&EndYear=2018-9">高雄機場營運實績（官方）</a></br>
+            <a href="https://www.tsa.gov.tw/tsa/info_performance1.aspx">松山機場營運實績（官方）</a></br>
+            <a href="https://zh.wikipedia.org/wiki/%E8%87%BA%E4%B8%AD%E6%B8%85%E6%B3%89%E5%B4%97%E6%A9%9F%E5%A0%B4">臺中機場營運實績（維基百科）</a>
+
+        </div>
+    </div>
+    {{> end}}
+    <!-- my js & css -->
+    <script src="clock.js"></script>
+    <script src="taiwanmap.js"></script>
+    <script src="airportpiechart.js"></script>
+    <script src="airportbarchart.js"></script>
+    <script src="airportlinechart.js"></script>
+    {{> footer}}
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>
